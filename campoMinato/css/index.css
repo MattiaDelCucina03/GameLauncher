@@ -23,7 +23,6 @@
   }
   
   .board {
-    display: inline-grid;
     padding: 10px;
     grid-template-columns: repeat(var(--size), 60px);
     grid-template-rows: repeat(var(--size), 60px);
