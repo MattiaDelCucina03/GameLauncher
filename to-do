@@ -1,0 +1,4 @@
+Per forza
+  - Sistemare l'organizazzione file , il file index deve essere esterno, corretta la gestione del css e nei minigiochi, da sistemare la posizione della home del log in
+  - aggiunta di un controllo della sessione in ogni pagina se non presente e metterlo, in caso non ci sia la sessione rimandare alla log in
+  - !! CLASSIFICA !!
