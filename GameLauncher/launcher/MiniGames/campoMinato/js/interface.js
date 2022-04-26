@@ -71,8 +71,11 @@ function checkGameEnd(board,boardElement,messageText, difficulty) {
 
     if (win) {
         messageText.textContent = "Hai vinto";
-        let score=100;
-        addScore(1,1, score);
+        let score=0;
+        if(difficulty=="Facile") score=5;
+        if(difficulty=="Media") score=10;
+        if(difficulty=="Difficile") score=15;
+        addScore("CAMPOMINATO", score);
     }
     if (lose) {
         messageText.textContent = "hai perso";

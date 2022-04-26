@@ -1,12 +1,9 @@
-export function addScore(userID,gameID,score){
+export function addScore(gameCode,score){
     var xhttp=new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.write("Funge");
-        }else{
-            document.write("non funge");
-        }
-      };
-    xhttp.open("GET", "AjaxCall.php?userID="+userID+"&gameID="+gameID+"&score="+score, true);
+    /*xhttp.onreadystatechange = function() {
+        console.log(this.status);
+        console.log(this.responseText);
+      };*/
+    xhttp.open("GET", "../AjaxCall.php?gameCode="+gameCode+"&score="+score, true);
     xhttp.send();
 }
