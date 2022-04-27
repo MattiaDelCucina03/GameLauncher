@@ -24,7 +24,7 @@ body{
       background-color: rgb(205, 16, 16);
   }
   
-  #user{
+  #utente{
     
     width: 30%;
       margin: 50px auto 0px;
@@ -34,3 +34,4 @@ body{
   }
   
   img.resized { width: 200px; height: auto; }
+  
