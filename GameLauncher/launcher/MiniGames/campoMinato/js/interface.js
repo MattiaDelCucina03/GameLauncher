@@ -8,7 +8,7 @@ import {
 } from "./game.js";
 import{
     addScore
-}from "../../AjaxCall.js";
+}from "../../../Ajax/JS/AjaxCall.js";
 const buttons=document.getElementsByClassName("buttons");
 const gamePart=document.getElementsByClassName("game_part");
 const minesLeftText = document.querySelector("[data-mine-count]");

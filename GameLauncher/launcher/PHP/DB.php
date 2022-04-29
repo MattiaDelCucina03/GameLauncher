@@ -3,7 +3,7 @@ session_start();
 $username = "";
 $errors = array();
 
-$db = mysqli_connect('localhost','root','','launcher-game');
+$db = mysqli_connect('localhost','root','','videogames');
 
 if(isset($_POST['register'])){
     $username = htmlentities($_POST['username']);
@@ -15,31 +15,30 @@ if(isset($_POST['register'])){
     }else{
 
         $password_1 = crypt($password_1,"gdasvdkjhabdgjasv");
-        $sql = "INSERT INTO users(username,password)
+        $sql = "INSERT INTO users(name,password)
                 VALUE('$username','$password_1')";
         mysqli_query($db,$sql);
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password_1;
-        $_SESSION['successo'] = "sei registrato";
+        $_SESSION['success'] = "sei registrato";
         header('Location:login.php');
     }
 
 }
-if(isset($_POST['accedi'])){
+if(isset($_POST['access'])){
     if(count($errors)== 0){
         $password = htmlentities($_POST['password']);
         $password = crypt($password,"gdasvdkjhabdgjasv");
-        $sql = "SELECT username FROM users where password = '".$password."'";
+        $sql = "SELECT name FROM users where password = '".$password."'";
         $username = htmlentities($_POST['username']);
         $result = mysqli_query($db, $sql);
         $row = $result->fetch_row();
-        $accesso = $row[0];
-        if($username == $accesso){
-    echo "hhihihihihihihihi";
+        $access = $row[0];
+        if($username == $access){
 
             $_SESSION['username']= $username;
             $_SESSION['password'] = $password;
-            $_SESSION['successo'] = "sei entrato";
+            $_SESSION['success'] = "sei entrato";
             header('Location:home.php');
             
         }
@@ -49,4 +48,4 @@ if(isset($_POST['accedi'])){
 }
 if(isset($_POST['logout'])){
      header('Location:login.php'); 
-    }
+}

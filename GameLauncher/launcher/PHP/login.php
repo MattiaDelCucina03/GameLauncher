@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
                 <input type="password" placeholder="password" name="password" required>
             </div>
             <div class="campi">
-            <button type="submit" id="btn" name="accedi" value="accedi">accedi</button>
+            <button type="submit" id="btn" name="access" value="accedi">accedi</button>
             </div>
             <p>
             <a href="register.php">non hai un profilo?</a>
