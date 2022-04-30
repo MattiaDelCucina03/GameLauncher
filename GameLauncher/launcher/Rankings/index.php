@@ -15,16 +15,22 @@
     $result = $mysqli->query($query);
     while ($row = $result->fetch_assoc()) {
     ?>
-    <button type="submit" onclick="seeRanks(<?php echo $row['gameCode'] ?>)"><?php echo $row['name'] ?></button>
+    <button type="button" class="buttons" id="<?php echo $row['gameCode'] ?>"><?php echo $row['name'] ?></button>
     <?php
     }
     ?>
-    <button type="submit" onclick="seeRanks('General')">General</button>
+    <button type="button" class="buttons" id="GENERAL">General</button>
+    <div id="divContent"></div>
 </body>
 <script type="module">
 import {
-    addScore, seeRankings
+    seeRankings
 } from "../Ajax/JS/AjaxCall.js";
+let buttons=document.getElementsByClassName("buttons");
+for(let i=0;i<buttons.length;i++){
+    //buttons[i].addEventListener("click",seeRankings(buttons[i].textContent));
+    buttons[i].onclick=function(){seeRankings(buttons[i].id)}
+}
 </script>
 
 </html>
