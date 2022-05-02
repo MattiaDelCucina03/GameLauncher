@@ -1,6 +1,7 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection } from './snake.js'
-import { update as updateFood, draw as drawFood} from './food.js';
+import { update as updateFood, draw as drawFood } from './food.js';
 import { outsideGrid } from './grid.js';
+import { addScore } from '../../../Ajax/JS/AjaxCall.js';
 
 let lastRenderTime = 0;
 let gameOver = false;
@@ -9,10 +10,14 @@ const gameBoard = document.getElementById('game-board');
 function main(currentTime){
     
     if(gameOver === true){
-         if(confirm("Hai perso. Premi Ok per ricominciare a giocare")){
-             window.location = '/ProgettoHackaton/snake/index.html';
-         }
-         return
+        let score = parseInt(document.getElementById('score').textContent);
+        if(score > 0){
+            addScore("SNAKE", score);
+        }
+        if(confirm("Hai perso. Premi Ok per ricominciare a giocare")){
+            window.location.reload();
+        }
+        return
     }
 
 
