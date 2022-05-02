@@ -8,7 +8,7 @@ import {
 } from "./game.js";
 import{
     addScore
-}from "../../AjaxCall.js";
+}from "../../../Ajax/JS/AjaxCall.js";
 const buttons=document.getElementsByClassName("buttons");
 const gamePart=document.getElementsByClassName("game_part");
 const minesLeftText = document.querySelector("[data-mine-count]");
@@ -19,7 +19,7 @@ const messageText = document.querySelector(".subtext");
     board_size+=4;
     buttons[i].onclick=function(){createGame(board_size, numberOfMines)};
 }*/
-buttons[0].onclick=function(){createGame(8,1, "Facile")};
+buttons[0].onclick=function(){createGame(8,6, "Facile")};
 buttons[1].onclick=function(){createGame(9,14, "Media")};
 buttons[2].onclick=function(){createGame(12,20, "Difficile")};
 function createGame(board_size, numberOfMines, difficulty) {
@@ -71,8 +71,11 @@ function checkGameEnd(board,boardElement,messageText, difficulty) {
 
     if (win) {
         messageText.textContent = "Hai vinto";
-        let score=100;
-        addScore(1,1, score);
+        let score=0;
+        if(difficulty=="Facile") score=5;
+        if(difficulty=="Media") score=10;
+        if(difficulty=="Difficile") score=15;
+        addScore("CAMPOMINATO", score);
     }
     if (lose) {
         messageText.textContent = "hai perso";
