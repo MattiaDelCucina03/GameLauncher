@@ -32,6 +32,18 @@
             Mine rimaste: <span data-mine-count></span>
         </div>
         <div class="board element"></div>
+        <div class="row">
+            <div class="col text-center game_part"><button type="button" class="btn btn-danger btn-lg" onclick="restart()">Ricomincia</button></div>
+            <div class="col text-center game_part"><button type="button" class="btn btn-info btn-lg" onclick="returnHome()">Home</button></div>
+        </div>
     </body>
+    <script>
+        function restart(){
+            window.location.reload();
+        }
+        function returnHome(){
+            location.href="../../PHP/home.php";
+        }
+    </script>
     
 </html>
