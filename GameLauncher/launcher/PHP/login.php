@@ -28,38 +28,10 @@
             <button type="submit" id="btn" name="access" value="accedi">accedi</button>
             </div>
             <p>
-            <a href="register.php">non hai un profilo?</a>
+            <a href="register.php">don't have a profile?</a>
             </p>
         </form> 
 
-        <?php
-        /*
-         session_start();
-         $username = "";
-         $db = mysqli_connect('localhost','root','','launcher-game');
-            if(isset($_POST['accedi'])){
-                if(count($errors)== 0){
-                    $password = $_POST['password'];
-                    echo $password;
-                    $password = hash($password,'srdtfgyiuhjiuhgbvuy');
-                    echo $password;
-                    $sql = "SELECT username FROM users where password = '".$password."'";
-                    $username = htmlentities($_POST['username']);
-                    $result = mysqli_query($db, $sql);
-                    $row = $result->fetch_row();
-                   // echo $row[0];
-                    $accesso = $row[0];
-                    if($username == $accesso){
-                        $_SESSION['username']= $username;
-                        $_SESSION['successo'] = "sei entrato";
-                        header('Location:home.php');
-                    }
-                } else {
-                    header("Location: login.php");
-                }
-            
-            }
-            */
-        ?> 
+    
 </body>
 </html>
