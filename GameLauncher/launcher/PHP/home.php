@@ -37,7 +37,8 @@ require_once('DB.php');
             <h2><strong><?php echo $_SESSION['username']; ?></strong></h2>
         <?php } ?>
     <a href="../Rankings/index.php">
-            <img src="../PNG/coppa.png" style="width: 50%;" >
+            <img src="../PNG/coppa.png" style="width: 40%;" >
+            <a>Classifica</a>
     </a>
     </div>
     <form action="home.php" method="POST">
