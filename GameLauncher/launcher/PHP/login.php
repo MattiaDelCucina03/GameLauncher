@@ -15,7 +15,7 @@
         <h2>LOGIN</h2>
     </div>
         <form action="DB.php" method="POST">
-        <?php require_once('errors.php')?>
+       
             <div class="campi">
             <label>Username:</label>
                 <input type="text" placeholder="username" name="username" required>

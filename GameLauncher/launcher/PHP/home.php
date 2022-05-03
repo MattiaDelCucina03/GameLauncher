@@ -32,15 +32,17 @@ require_once('DB.php');
     endif
     ?>
     <div id="utente">
-        <h1>welcome!</h1>
+        <h1>Welcome!</h1>
         <?php if (isset($_SESSION['username'])) { ?>
             <h2><strong><?php echo $_SESSION['username']; ?></strong></h2>
         <?php } ?>
+    <a href="../Rankings/index.php">
+            <img src="../PNG/coppa.png" style="width: 50%;" >
+    </a>
     </div>
     <form action="home.php" method="POST">
         <button type="submit" id="logout" name="logout" value="logout">logout</button>
     </form>
-    <button type="submit" onclick="seeRanks()">classifica</button>
     <?php
     if (isset($_POST['logout'])) {
         header('Location:login.php');

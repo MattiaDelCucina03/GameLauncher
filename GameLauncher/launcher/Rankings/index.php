@@ -20,8 +20,12 @@
     }
     ?>
     <button type="button" class="buttons" id="GENERAL">General</button>
+    <a href="../PHP/home.php"><button type="button" class="buttons">Home</button></a>
+    
     <div id="divContent"></div>
+
 </body>
+
 <script type="module">
 import {
     seeRankings

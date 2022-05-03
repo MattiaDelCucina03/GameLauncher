@@ -13,7 +13,7 @@
         <h2>REGISTER</h2>
     </div>
         <form action="DB.php" method="POST">
-            <?php include('errors.php')?>
+    
             <div class="campi">
             <label>username:</label>
                 <input type="text" placeholder="username" name="username" required>
