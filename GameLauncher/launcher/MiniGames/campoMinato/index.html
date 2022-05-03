@@ -33,8 +33,16 @@
         </div>
         <div class="board element"></div>
         <div class="row">
-            <div class="col text-center game_part"><button type="button" class="btn btn-danger btn-lg" onclick="restart()">Ricomincia</button></div>
-            <div class="col text-center game_part"><button type="button" class="btn btn-info btn-lg" onclick="returnHome()">Home</button></div>
+            <div class="col-4 text-center game_part"><button type="button" class="btn btn-danger btn-lg" onclick="restart()">Ricomincia</button></div>
+            <div class="col-4 text-center game_part"><button type="button" class="btn btn-info btn-lg" onclick="returnHome()">Home</button></div>
+			<div class="col-4 text-center game_part">
+			<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+			<option selected>Open this select menu</option>
+			<option value="1">Facile</option>
+			<option value="2">Media</option>
+			<option value="3">Difficile</option>
+			</div>
+</select>
         </div>
     </body>
     <script>
