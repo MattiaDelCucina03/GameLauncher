@@ -36,9 +36,9 @@ require_once('DB.php');
         <?php if (isset($_SESSION['username'])) { ?>
             <h2><strong><?php echo $_SESSION['username']; ?></strong></h2>
         <?php } ?>
+        <p>Classifica:</p>
     <a href="../Rankings/index.php">
             <img src="../PNG/coppa.png" style="width: 40%;" >
-            <a>Classifica</a>
     </a>
     </div>
     <form action="home.php" method="POST">
