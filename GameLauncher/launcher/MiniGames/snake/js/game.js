@@ -10,7 +10,7 @@ const gameBoard = document.getElementById('game-board');
 function main(currentTime){
     
     if(gameOver === true){
-        let score = parseInt(document.getElementById('score').textContent);
+        let score = parseInt(document.querySelector('[score]').textContent);
         if(score > 0){
             addScore("SNAKE", score);
         }

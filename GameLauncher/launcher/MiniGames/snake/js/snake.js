@@ -19,7 +19,6 @@ export function update(){
 
 }
 
-
 export function draw(gameBoard){
     snakeBody.forEach(segment => {
         const snakeElement = document.createElement('div');

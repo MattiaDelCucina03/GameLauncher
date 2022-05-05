@@ -29,8 +29,8 @@ if(isset($_POST['access'])){
     if(count($errors)== 0){
         $password = htmlentities($_POST['password']);
         $password = crypt($password,"gdasvdkjhabdgjasv");
-        $sql = "SELECT name FROM users where password = '".$password."'";
         $username = htmlentities($_POST['username']);
+        $sql = "SELECT name FROM users where password = '".$password."' and name = '".$username."'";
         $result = mysqli_query($db, $sql);
         $row = $result->fetch_row();
         $access = $row[0];
