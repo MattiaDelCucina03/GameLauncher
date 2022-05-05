@@ -1,4 +1,4 @@
-export function seeRankings(gameCode){
+export function seeRankings(gameCode = 'GENERAL'){
   let div=document.getElementById("divContent");
   var xhttp=new XMLHttpRequest();
   xhttp.onreadystatechange = function() {

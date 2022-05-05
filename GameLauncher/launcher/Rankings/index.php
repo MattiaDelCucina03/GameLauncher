@@ -35,6 +35,9 @@ for(let i=0;i<buttons.length;i++){
     //buttons[i].addEventListener("click",seeRankings(buttons[i].textContent));
     buttons[i].onclick=function(){seeRankings(buttons[i].id)}
 }
+document.addEventListener('DOMContentLoaded', function(){
+    seeRankings();
+})
 </script>
 
 </html>
