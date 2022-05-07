@@ -19,10 +19,19 @@ const messageText = document.querySelector(".subtext");
     board_size+=4;
     buttons[i].onclick=function(){createGame(board_size, numberOfMines)};
 }*/
-buttons[0].onclick=function(){createGame(8,6, "Facile")};
-buttons[1].onclick=function(){createGame(9,14, "Media")};
-buttons[2].onclick=function(){createGame(12,20, "Difficile")};
+buttons[0].onclick=function(){
+    document.getElementsByClassName("board")[0].textContent = "";
+    createGame(9,14, "Media")};
+buttons[1].onclick=function(){
+    document.getElementsByClassName("board")[0].textContent = "";
+    createGame(12,20, "Difficile")};
+
+document.addEventListener('DOMContentLoaded', function(){
+    createGame(8,6,'Facile');
+})
+
 function createGame(board_size, numberOfMines, difficulty) {
+    console.log(board_size, numberOfMines, difficulty)
     document.getElementsByClassName("board")[0].style.display="inline-grid";
     for(let button of buttons){
         button.style.display="none";

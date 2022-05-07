@@ -15,12 +15,12 @@
     $result = $mysqli->query($query);
     while ($row = $result->fetch_assoc()) {
     ?>
-    <button type="button" class="buttons" id="<?php echo $row['gameCode'] ?>"><?php echo $row['name'] ?></button>
+    <button type="button" class="buttons btn btn-warning btn-lg" id="<?php echo $row['gameCode'] ?>"><?php echo $row['name'] ?></button>
     <?php
     }
     ?>
-    <button type="button" class="buttons" id="GENERAL">General</button>
-    <a href="../PHP/home.php"><button type="button" class="buttons">Home</button></a>
+    <button type="button" class="buttons btn btn-success btn-lg" id="GENERAL">General</button>
+    <a href="../PHP/home.php"><button type="button" class="buttons btn btn-info btn-lg">Home</button></a>
     
     <div id="divContent"></div>
 

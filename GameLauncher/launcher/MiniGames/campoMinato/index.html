@@ -20,13 +20,6 @@
         <title>Campo minato</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center"><button type="button" class="btn btn-success buttons btn-lg">Facile</button></div>
-                <div class="col text-center"><button type="button" class="btn btn-warning buttons btn-lg">Media</button></div>
-                <div class="col text-center"><button type="button" class="btn btn-danger buttons btn-lg">Difficile</button></div>
-            </div>
-        </div>
         <h3 class="title game_part">Campo minato, Difficoltà: <span difficulty></span></h3>
         <div class="subtext game_part">
             Mine rimaste: <span data-mine-count></span>
@@ -35,14 +28,13 @@
         <div class="row">
             <div class="col-4 text-center game_part"><button type="button" class="btn btn-danger btn-lg" onclick="restart()">Ricomincia</button></div>
             <div class="col-4 text-center game_part"><button type="button" class="btn btn-info btn-lg" onclick="returnHome()">Home</button></div>
-			<div class="col-4 text-center game_part">
-			<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-			<option selected>Open this select menu</option>
-			<option value="1">Facile</option>
-			<option value="2">Media</option>
-			<option value="3">Difficile</option>
-			</div>
-</select>
+			<div class="col-4 text-center game_part"><button type="button" class="btn btn-warning btn-lg" onclick="setDifficulty()">Imposta difficoltà</button></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center"><button type="button" class="btn btn-warning buttons dif btn-lg">Media</button></div>
+                <div class="col text-center"><button type="button" class="btn btn-danger buttons dif btn-lg">Difficile</button></div>
+            </div>
         </div>
     </body>
     <script>
@@ -51,6 +43,12 @@
         }
         function returnHome(){
             location.href="../../PHP/home.php";
+        }
+        function setDifficulty(){
+            const buttons=document.getElementsByClassName("dif");
+            for(let button of buttons){
+                button.style.display="inline";
+            }
         }
     </script>
     

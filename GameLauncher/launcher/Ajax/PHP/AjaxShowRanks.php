@@ -39,8 +39,6 @@ $posizione=0;
             <p class="podium__city">'.$row["name"].' score: '.$row["score"].'</p>
             <div class="podium__rank third">3</div>
           </div>';
-        } else if($posizione > 15){
-            
         } else {
     ?>
 </div>
