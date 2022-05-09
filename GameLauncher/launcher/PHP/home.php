@@ -1,5 +1,6 @@
 <?php
 require_once('DB.php');
+require_once('controllo.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +42,10 @@ require_once('DB.php');
             <img src="../PNG/coppa.png" style="width: 40%;" >
     </a>
     </div>
-    <form action="home.php" method="POST">
+    <form action="logout.php" method="POST">
         <button type="submit" id="logout" name="logout" value="logout">logout</button>
     </form>
+    
     <?php
     if (isset($_POST['logout'])) {
         header('Location:login.php');

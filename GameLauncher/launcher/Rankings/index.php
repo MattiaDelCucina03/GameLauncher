@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(array_key_exists("username", $_SESSION)!=true){
+        header("Location: ../PHP/login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

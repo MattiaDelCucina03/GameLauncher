@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 27, 2022 alle 19:11
--- Versione del server: 10.4.17-MariaDB
--- Versione PHP: 7.4.15
+-- Creato il: Mag 09, 2022 alle 16:24
+-- Versione del server: 10.4.22-MariaDB
+-- Versione PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,8 +40,8 @@ CREATE TABLE `games` (
 --
 
 INSERT INTO `games` (`gameCode`, `description`, `img`, `name`, `link`) VALUES
-('CAMPOMINATO', 'Gioco di campo di minato', '../PNG/campo_minato.png', 'Campo Minato', '../Minigames/campoMinato/index.html'),
-('SNAKE', 'Gioco di snake', '../PNG/snake.png', 'Snake', '../Minigames/snake/index.html');
+('CAMPOMINATO', 'Gioco di campo di minato', '../PNG/campo_minato.png', 'Campo Minato', '../Minigames/campoMinato/index.php'),
+('SNAKE', 'Gioco di snake', '../PNG/snake.png', 'Snake', '../Minigames/snake/index.php');
 
 -- --------------------------------------------------------
 
@@ -55,6 +55,13 @@ CREATE TABLE `scores` (
   `score` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dump dei dati per la tabella `scores`
+--
+
+INSERT INTO `scores` (`userID`, `gameCode`, `score`) VALUES
+(1, 'CAMPOMINATO', 5);
+
 -- --------------------------------------------------------
 
 --
@@ -66,6 +73,13 @@ CREATE TABLE `users` (
   `name` varchar(256) NOT NULL,
   `password` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `users`
+--
+
+INSERT INTO `users` (`userID`, `name`, `password`) VALUES
+(1, 'a', 'gd.RO1KdB/Qm6');
 
 --
 -- Indici per le tabelle scaricate
@@ -99,7 +113,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Limiti per le tabelle scaricate
