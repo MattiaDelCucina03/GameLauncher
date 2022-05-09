@@ -25,6 +25,13 @@ body{
     border: .25vmin solid black;
 }
 
+.snakeHead {
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
 .food {
     background-image: url("../image/mela.png");
     background-repeat: no-repeat;
@@ -32,5 +39,5 @@ body{
 }
 
 .score {
-    color: black;
+    color: white;
 }
